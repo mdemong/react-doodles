@@ -15,17 +15,26 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <button
-          style={{marginBottom:'2em'}}
           onClick={() => (() => {sayHeyDawg()})()}
           >
           Say Hi
         </button>
         <button
-          style={{marginBottom:'2em'}}
           onClick={() => {sayHey('Jeff')}}
           >
           Say Hi to Jeff
         </button>
+        <button
+          // Braces can be omitted from function body if single expression is directly returned
+          onClick={() => sayHey('Steve')}
+          >
+          Say Hi to Steve
+        </button>
+        <button
+          onClick={() => (() => (() => (() => (sayHey('AAAAA')))())())()}
+          >
+            Yell Loudly
+          </button>
       </header>
     </div>
   );
